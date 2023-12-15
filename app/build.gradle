@@ -1,0 +1,62 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.computer_network.myapplication'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.computer_network.myapplication"
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.10.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+   // implementation 'com.mapbox.maps:android:10.16.2'
+
+    implementation "com.google.android.gms:play-services-location:21.0.1"
+
+    implementation 'org.mapsforge:mapsforge-core:0.20.0'
+    implementation 'org.mapsforge:mapsforge-map:0.20.0'
+    implementation 'org.mapsforge:mapsforge-map-reader:0.20.0'
+    implementation 'org.mapsforge:mapsforge-themes:0.20.0'
+    implementation 'net.sf.kxml:kxml2:2.3.0'
+    implementation 'org.mapsforge:mapsforge-map-android:0.20.0'
+    implementation 'com.caverock:androidsvg:1.4'
+    implementation 'org.mapsforge:mapsforge-core:0.20.0'
+    implementation 'org.mapsforge:mapsforge-poi:0.20.0'
+    implementation 'org.mapsforge:mapsforge-poi-android:0.20.0'
+    implementation 'org.mapsforge:sqlite-android:0.18.0'
+    implementation 'org.mapsforge:sqlite-android:0.18.0:natives-armeabi-v7a'
+    implementation 'org.mapsforge:sqlite-android:0.18.0:natives-arm64-v8a'
+    implementation 'org.mapsforge:sqlite-android:0.18.0:natives-x86'
+    implementation 'org.mapsforge:sqlite-android:0.18.0:natives-x86_64'
+
+    implementation 'com.mapbox.mapboxsdk:mapbox-android-sdk:9.7.0'
+    implementation 'com.mapbox.mapboxsdk:mapbox-sdk-geojson:6.9.0'
+    implementation 'com.mapbox.mapboxsdk:mapbox-sdk-services:5.8.0'
+}
